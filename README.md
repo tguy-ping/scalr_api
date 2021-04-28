@@ -1,14 +1,15 @@
 # scalr_api
 bash script for SCALR API
 
-Usage: ./scalr_tools.sh <task> [flags] <action> <server-id>
+Usage: ./scalr_tools.sh [task] [flags] [action] [server-id]
+
 Task:
   Use with action
 
 	server-action
 	request
 	signature
-Flags:
+Flags (overrides environment variables):
   Use with any task
 
 	-a    |  --server 	<your SCALR host>
@@ -23,3 +24,14 @@ Actions:
 	suspend
 	sync
 	terminate
+Example:
+
+	./scalr_tools.sh server-action -a https://scalr.example.com -k XXXXXXX -s xxxxxxxxxxxx --env-id 8 resume xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+	
+Environment variables checked:
+
+	SCALR_API_SERVER
+	SCALR_API_KEY
+	SCALR_API_SECRET
+	SCALR_ENV_ID
+	SCALR_SERVER_ID
