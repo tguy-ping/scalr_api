@@ -7,24 +7,27 @@ API_SECRET=$SCALR_API_SECRET
 ENV_ID=$SCALR_ENV_ID
 SERVER_ID=$SCALR_SERVER_ID
 
-USAGE_TASK="
-	server-action
-	request
-	signature"
+USAGE_TASK='
+Tasks:
+	server-action		Executes request based on supplied action and server.
+				Actions available:
+					status
+					resume
+					suspend
+					sync
+					terminate
+	request			Executes request based on supplied HTTP method, API path,
+					and optional query string and body
+	signature		Prints signature based on supplied HTTP method, API path,
+					and optional query string and body'
 
-USAGE_FLAGS="
-	-a    |  --server 	<your SCALR host>
-	-k    |  --api-key	<Key with permissions for server/farm>
-	-s    |  --api-secret	<Secret with permissions for server/farm>
-	-e    |  --env-id	<environment id>
-	-sid  |  --server-id	<server id of target>"
-
-USAGE_ACTIONS="
-	status
-	resume
-	suspend
-	sync
-	terminate"
+USAGE_FLAGS='
+Flags:
+	-a    |  --server 	SCALR host. 		Overwrites $SCALR_API_SERVER
+	-k    |  --api-key	API key ID 		Overwrites $SCALR_API_KEY
+	-s    |  --api-secret	API key secret		Overwrites $SCALR_API_SECRET
+	-e    |  --env-id	Environment id. 	Overwrites $SCALR_ENV_ID
+	-sid  |  --server-id	Server id of target. 	Overwrites $SCALR_SERVER_ID'
 
 # input: http-method path [formatted_date qs body]
 # output: signature
@@ -174,10 +177,7 @@ exit_error () {
 }
 
 usage () {
-	echo "Usage: $0 <task> [flags] <action> <server-id>"
-	echo "Task: $USAGE_TASK"
-	echo "Flags: $USAGE_FLAGS"
-	echo "Actions: $USAGE_ACTIONS"
+	printf '%s\n' "Usage: $0 <task> [-a <scalr-api-url>...] [<action>] [<server-id>]" "$USAGE_TASK" "$USAGE_FLAGS"
 	exit 1
 }
 
