@@ -42,11 +42,3 @@ Example:
 					--api-secret 0123456789abcdef0123456789abcdef12345678 \
 					--env-id 12345678-abcd-0000-xxxx-12345678 \
 					resume abcd1234-0000-aaaa-1111-abcdef00
-	
-Environment variables checked:
-
-	SCALR_API_SERVER
-	SCALR_API_KEY
-	SCALR_API_SECRET
-	SCALR_ENV_ID
-	SCALR_SERVER_ID
