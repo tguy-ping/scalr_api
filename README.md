@@ -1,5 +1,5 @@
 # scalr_api
-Shell script for simplifying SCALR API (v2) calls. The SCALR API requires that a hash of the request be created using the API key secret and included in a header with the request. This script will build, and execute, the request via curl. Some quality of life functions are included to make working with specific servers in a farm easier. You can request an API key from https://<your-scalr-host>/#/core/api2
+Shell script for simplifying SCALR API (v2) calls. The SCALR API requires that a hash of the request be created using the API key secret and included in a header with the request. This script will build, and execute, the request via curl. Some quality of life functions are included to make working with specific servers in a farm easier. You can request an API key from https://\<your-scalr-host\>/#/core/api2
 	
 More information about the SCALR API is available here: https://api-explorer.scalr.com/
 
