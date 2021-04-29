@@ -21,13 +21,13 @@ Tasks:
 	signature		Prints signature based on supplied HTTP method, API path,
 					and optional query string and body'
 
-USAGE_FLAGS='
+USAGE_FLAGS="
 Flags:
-	-a    |  --server 	SCALR host. 		Overwrites $SCALR_API_SERVER
-	-k    |  --api-key	API key ID 		Overwrites $SCALR_API_KEY
-	-s    |  --api-secret	API key secret		Overwrites $SCALR_API_SECRET
-	-e    |  --env-id	Environment id. 	Overwrites $SCALR_ENV_ID
-	-sid  |  --server-id	Server id of target. 	Overwrites $SCALR_SERVER_ID'
+	-a    |  --server 	SCALR host. 		Overwrites ${SCALR_API_SERVER:-SCALR_API_SERVER}
+	-k    |  --api-key	API key ID 		Overwrites ${SCALR_API_KEY:-SCALR_API_KEY}
+	-s    |  --api-secret	API key secret		Overwrites ${SCALR_API_SECRET:-SCALR_API_SECRET}
+	-e    |  --env-id	Environment id. 	Overwrites ${SCALR_ENV_ID:-SCALR_ENV_ID}
+	-sid  |  --server-id	Server id of target. 	Overwrites ${SCALR_SERVER_ID:-SCALR_SERVER_ID}"
 
 # input: http-method path [formatted_date qs body]
 # output: signature
