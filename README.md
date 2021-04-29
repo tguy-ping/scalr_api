@@ -12,7 +12,13 @@ Usage:
 
 Task:
 
-	server-action		Executes request based on supplied action and server
+	server-action		Executes request based on supplied action and server.
+				Actions available:
+					status
+					resume
+					suspend
+					sync
+					terminate
 	request			Executes request based on supplied HTTP method, API path, and optional query string and body
 	signature		Prints signature based on supplied HTTP method, API path, and optional query string and body
 Flags (overrides environment variables):
@@ -25,13 +31,7 @@ Flags (overrides environment variables):
 	-s    |  --api-secret	Secret with permissions for server/farm. Overwrites $SCALR_API_SECRET
 	-e    |  --env-id	Environment id. Overwrites $SCALR_ENV_ID
 	-sid  |  --server-id	Server id of target. Overwrites $SCALR_SERVER_ID
-Actions:
 
-	status
-	resume
-	suspend
-	sync
-	terminate
 Examples:
 
 	./scalr_tools.sh server-action -a https://scalr.example.com -k xxxxx -s xxxxx --env-id x resume xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
