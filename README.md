@@ -5,7 +5,7 @@ More information about the SCALR API is available here: https://api-explorer.sca
 
 Installation
 
-	curl -o https://raw.githubusercontent.com/tguy-ping/scalr_api/main/scalr_tools.sh
+	curl -o 'scalr_tools.sh' 'https://raw.githubusercontent.com/tguy-ping/scalr_api/main/scalr_tools.sh'
 	chmod +x ./scalr_tools.sh
 
 Usage: 
